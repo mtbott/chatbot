@@ -9,15 +9,15 @@
       box-sizing: border-box;
     }
     body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0d0d0d;
-  color: #fff;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
     header {
       background: #1a0000;
       padding: 15px;
@@ -29,16 +29,16 @@
       animation: fadeIn 1s ease-out;
     }
     #chat {
-  position: relative;
-  height: calc(100vh - 64px - 60px); /* header height + footer height */
-  overflow-y: auto;
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  scroll-behavior: smooth;
-  animation: slideUp 1s ease-in-out;
-}
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+      padding-bottom: 80px; /* ✅ Fix: extra space for input bar */
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      scroll-behavior: smooth;
+      animation: slideUp 1s ease-in-out;
+    }
     .msg {
       padding: 12px;
       border-radius: 12px;
@@ -72,16 +72,13 @@
       transform: scale(1.05);
     }
     footer {
-  display: flex;
-  padding: 10px;
-  border-top: 1px solid #660000;
-  background: #1a0000;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-}
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #660000;
+      background: #1a0000;
+      position: sticky;
+      bottom: 0;
+    }
     input {
       flex: 1;
       padding: 10px;
@@ -234,6 +231,7 @@ function upiPay(price) {
       </a>`, 'bot');
   }, 2000);
 }
+
 function simulateText(txt) {
   document.getElementById('q').value = txt;
   ask();
@@ -264,7 +262,6 @@ function selectPlanCustom(service, label, price) {
     <button class="button" onclick="showPayment('${price}')">I Agree</button>`, 'bot');
   }, 800);
 }
-
 </script>
 
 </body>
