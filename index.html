@@ -181,7 +181,7 @@ function ask() {
       { label: "6 Months", price: "₹149" },
       { label: "1 Year", price: "₹289" }
     ]);
-  } else if (txt.includes("zee5") || txt.includes("sonyliv") || txt.includes("discovery") || txt.includes("hoichoi")) {
+  } else if (txt.includes("zee5") || txt.includes("sonyliv") || txt.includes("discovery") || txt.includes("hoichoi") || txt.includes("sunnxt") || txt.includes("sun nxt")) {
     showPlans("Selected OTT", [
       { label: "3 Months", price: "₹99" },
       { label: "6 Months", price: "₹175" },
@@ -198,6 +198,7 @@ function ask() {
   <button class='button' onclick="simulateText('Zee5')">Zee5</button>
   <button class='button' onclick="simulateText('Discovery+')">Discovery+</button>
   <button class='button' onclick="simulateText('Hoichoi')">Hoichoi</button>
+  <button class='button' onclick="simulateText('SunNXT')">Sun NXT</button>
   <button class='button' onclick="simulateText('Crunchyroll')">Crunchyroll</button>
 </div>`, 'bot');
     }, 500);
